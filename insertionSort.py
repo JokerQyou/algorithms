@@ -15,9 +15,9 @@ class Insertion(object):
 	def sort(self, arg):
 		N = len(arg)
 		for x in xrange(0, N):
-			for y in xrange(x + 1, N):
-				if self.less(arg[y], arg[x]):
-					self.exch(arg, x, y)
+			for y in xrange(x, 0, -1):
+				if self.less(arg[y], arg[y - 1]):
+					self.exch(arg, y, y -1)
 
 	def exch(self, arg, i, j):
 		tmp = arg[i]
@@ -25,7 +25,7 @@ class Insertion(object):
 		arg[j] = tmp
 
 	def less(self, p, q):
-		return p - q < 0
+		return p < q
 
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):

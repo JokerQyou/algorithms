@@ -27,7 +27,7 @@ class Selection(object):
 		arg[j] = tmp
 
 	def less(self, p, q):
-		return p - q < 0
+		return p < q
 
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):
