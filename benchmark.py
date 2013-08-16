@@ -34,6 +34,14 @@ def main():
 					self.arg = arg
 					self.sort(self.arg)
 			sort = Insertion(L)
+		elif algorithm == 'insertionImproved':
+			import insertionSortImproved
+			class Insertion(insertionSortImproved.Insertion):
+				"""重载插入排序的构造函数使其不输出排序结果"""
+				def __init__(self, arg):
+					self.arg = arg
+					self.sort(self.arg)
+			sort = Insertion(L)
 		elif algorithm == 'shell':
 			import shellSort
 			class Shell(shellSort.Shell):
