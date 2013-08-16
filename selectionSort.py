@@ -22,9 +22,7 @@ class Selection(object):
 			self.exch(arg, x, minus)
 
 	def exch(self, arg, i, j):
-		tmp = arg[i]
-		arg[i] = arg[j]
-		arg[j] = tmp
+		arg[i], arg[j] = arg[j], arg[i]
 
 	def less(self, p, q):
 		return p < q

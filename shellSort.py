@@ -25,9 +25,7 @@ class Shell(object):
 			h = h / 3
 
 	def exch(self, arg, i, j):
-		tmp = arg[i]
-		arg[i] = arg[j]
-		arg[j] = tmp
+		arg[i], arg[j] = arg[j], arg[i]
 
 	def less(self, p, q):
 		return p < q
