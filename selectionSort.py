@@ -17,15 +17,10 @@ class Selection(object):
 		for x in xrange(0, N):
 			minus = x
 			for y in xrange(x + 1, N):
-				if self.less(arg[y], arg[minus]):
+				if arg[y] < arg[minus]:
 					minus = y
-			self.exch(arg, x, minus)
-
-	def exch(self, arg, i, j):
-		arg[i], arg[j] = arg[j], arg[i]
-
-	def less(self, p, q):
-		return p < q
+			# enchange elements
+			arg[x], arg[minus] = arg[minus], arg[x]
 
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):
@@ -48,5 +43,6 @@ def main():
 	argvs = sys.argv[1:]
 	argvs = [toNumber(x) for x in argvs]
 	sort = Selection(argvs)
+
 if __name__ == '__main__':
 	main()
