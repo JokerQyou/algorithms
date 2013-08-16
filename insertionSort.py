@@ -16,14 +16,9 @@ class Insertion(object):
 		N = len(arg)
 		for x in xrange(0, N):
 			for y in xrange(x, 0, -1):
-				if self.less(arg[y], arg[y - 1]):
-					self.exch(arg, y, y -1)
-
-	def exch(self, arg, i, j):
-		arg[i], arg[j] = arg[j], arg[i]
-
-	def less(self, p, q):
-		return p < q
+				if arg[y] < arg[y - 1]:
+					# exchange elements
+					arg[y], arg[y - 1] = arg[y - 1], arg[y]
 
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):

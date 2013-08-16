@@ -20,15 +20,9 @@ class Shell(object):
 		while h >= 1:
 			for x in xrange(h, N):
 				for y in xrange(x, h, -h):
-					if self.less(arg[y], arg[y - h]):
-						self.exch(arg, y, y - h)
+					if arg[y] < arg[y - h]:
+						arg[y], arg[y - h] = arg[y - h], arg[y]
 			h = h / 3
-
-	def exch(self, arg, i, j):
-		arg[i], arg[j] = arg[j], arg[i]
-
-	def less(self, p, q):
-		return p < q
 
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):

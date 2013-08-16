@@ -22,12 +22,6 @@ class Insertion(object):
 				y = y - 1
 				arg[y] = cur
 
-	def exch(self, arg, i, j):
-		arg[i], arg[j] = arg[j], arg[i]
-
-	def less(self, p, q):
-		return p - q < 0
-
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):
 			if self.less(arg[x], arg[x - 1]):
