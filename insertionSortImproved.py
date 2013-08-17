@@ -14,13 +14,15 @@ class Insertion(object):
 
 	def sort(self, arg):
 		N = len(arg)
-		for x in xrange(0, N):
-			cur = arg[x]
-			y = x
-			while y != 0 and arg[y - 1] > cur:
-				arg[y] = arg[y - 1]
-				y = y - 1
-				arg[y] = cur
+		i = 0
+		while i != N:
+			j = i
+			while j != 0 and arg[j - 1] >= arg[i]:
+				j = j - 1
+			value = arg[i]
+			del arg[i]
+			arg.insert(j, value)
+			i = i + 1
 
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):
