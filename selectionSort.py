@@ -24,7 +24,7 @@ class Selection(object):
 
 	def isSorted(self, arg):
 		for x in xrange(1, len(arg)):
-			if self.less(arg[x], arg[x - 1]):
+			if arg[x] < arg[x - 1]:
 				return False
 			return True
 
