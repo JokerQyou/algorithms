@@ -66,7 +66,7 @@ def main():
 			tSStart = time.time()
 			sort = Selection(L)
 			tSEnd = time.time()
-			print ('selection algorithm took %f second(s) to sort %d number(s).')%(tSEnd - tSStart, len(L))
+			print ('selection algorithm took %f second(s) to sort %d numbers.')%(tSEnd - tSStart, len(L))
 			
 			L = M[:]
 			import insertionSort
@@ -78,7 +78,7 @@ def main():
 			tIStart = time.time()
 			sort = Insertion(L)
 			tIEnd = time.time()
-			print ('insertion algorithm took %f second(s) to sort %d number(s).')%(tIEnd - tIStart, len(L))
+			print ('insertion algorithm took %f second(s) to sort %d numbers.')%(tIEnd - tIStart, len(L))
 
 			L = M[:]
 			import insertionSortImproved
@@ -90,7 +90,7 @@ def main():
 			tIIStart = time.time()
 			sort = InsertionImproved(L)
 			tIIEnd = time.time()
-			print ('insertionImproved algorithm took %f second(s) to sort %d number(s).')%(tIIEnd - tIIStart, len(L))
+			print ('insertionImproved algorithm took %f second(s) to sort %d numbers.')%(tIIEnd - tIIStart, len(L))
 
 			L = M[:]
 			import shellSort
@@ -102,13 +102,13 @@ def main():
 			tShStart = time.time()
 			sort = Shell(L)
 			tShEnd = time.time()
-			print ('shell algorithm took %f second(s) to sort %d number(s).')%(tShEnd - tShStart, len(L))
+			print ('shell algorithm took %f second(s) to sort %d numbers.')%(tShEnd - tShStart, len(L))
 
 			L = M[:]
 			tLStart = time.time()
 			L.sort()
 			tLEnd = time.time()
-			print ('list.sort() took %f second(s) to sort %d number(s).')%(tLEnd - tLStart, len(L))
+			print ('list.sort() took %f second(s) to sort %d numbers.')%(tLEnd - tLStart, len(L))
 
 			exit(1)
 		elif algorithm == 'list.sort':
@@ -116,7 +116,7 @@ def main():
 			L.sort()
 
 		tEnd = time.time()
-		print ('%s algorithm took %f second(s) to sort %d number(s).')%(algorithm, tEnd - tStart, len(L))
+		print ('%s algorithm took %f second(s) to sort %d numbers.')%(algorithm, tEnd - tStart, len(L))
 
 if __name__ == '__main__':
 	main()
