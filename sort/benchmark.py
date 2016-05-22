@@ -9,11 +9,11 @@ from docopt import docopt
 from terminaltables import AsciiTable
 import numpy
 
-from _base import is_sorted
-from insertion import Insertion
-from selection import Selection
-from shell import Shell
-from bubble import Bubble
+from ._base import is_sorted
+from .insertion import Insertion
+from .selection import Selection
+from .shell import Shell
+from .bubble import Bubble
 
 __doc__ = '''
 benchmark.py
@@ -69,7 +69,6 @@ def sort_compare(length, repeat):
         'selection': Selection.sort,
         'insertion': Insertion.sort,
         'insertion_1st_version': Insertion.sort_1st_version,
-        'insertion_2nd_version': Insertion.sort_2nd_version,
         'shell': Shell.sort,
     }
     run_funcs = (run, run_ordered, )

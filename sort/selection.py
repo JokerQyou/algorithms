@@ -4,7 +4,7 @@ from __future__ import print_function, unicode_literals, absolute_import
 
 from docopt import docopt
 
-from _base import SortBase, is_sorted
+from ._base import SortBase, is_sorted
 
 __doc__ = '''
 selection sort.
